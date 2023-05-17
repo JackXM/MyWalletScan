@@ -23,10 +23,6 @@ const items = [
         label: 'Deposit',
         key: 'deposit',
     },
-    {
-        label: 'Coffee',
-        key: 'coffee',
-    }
 ];
 const MenuHeader = () => {
     const navigate = useNavigate();
@@ -53,9 +49,6 @@ const MenuHeader = () => {
         }
         if (current === 'mirror') {
             navigate('/mirror');
-        }
-        if (current === 'coffee') {
-            navigate('/coffee');
         }
         if (current === 'deposit') {
             navigate('/deposit');
