@@ -588,17 +588,11 @@ function Zksync() {
                                 );
                             }}
                         />
-                        <Column title="钱包地址" dataIndex="address" key="address" align={"center"}/>
+                        <Column title="钱包地址" width={200} dataIndex="address" key="address" align={"center"}/>
                         <ColumnGroup title="ETH" className={"zks_eth"}>
                             <Column title="ETH" dataIndex="eth_balance" key="eth_balance" align={"center"}
                                     render={(text, record) => (text === null ? <Spin/> : text)}/>
                             <Column title="Tx" dataIndex="eth_tx_amount" key="eth_tx_amount" align={"center"}
-                                    render={(text, record) => (text === null ? <Spin/> : text)}/>
-                        </ColumnGroup>
-                        <ColumnGroup title="zkSyncLite" className={"zks_lite"}>
-                            <Column title="ETH" dataIndex="zks1_balance" key="zks1_balance" align={"center"}
-                                    render={(text, record) => (text === null ? <Spin/> : text)}/>
-                            <Column title="Tx" dataIndex="zks1_tx_amount" key="zks1_tx_amount" align={"center"}
                                     render={(text, record) => (text === null ? <Spin/> : text)}/>
                         </ColumnGroup>
                         <ColumnGroup title="zkSyncEra" className={"zks_era"}>
@@ -632,6 +626,12 @@ function Zksync() {
                                 <Column title="月" dataIndex="monthActivity" key="monthActivity" align={"center"}
                                         render={(text, record) => (text === null ? <Spin/> : text)}/>
                             </ColumnGroup>
+                        </ColumnGroup>
+                        <ColumnGroup title="zkSyncLite" className={"zks_lite"}>
+                            <Column title="ETH" dataIndex="zks1_balance" key="zks1_balance" align={"center"}
+                                    render={(text, record) => (text === null ? <Spin/> : text)}/>
+                            <Column title="Tx" dataIndex="zks1_tx_amount" key="zks1_tx_amount" align={"center"}
+                                    render={(text, record) => (text === null ? <Spin/> : text)}/>
                         </ColumnGroup>
                         <Column
                             className={"action"}
